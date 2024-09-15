@@ -24,6 +24,10 @@ $cloudfront_address = 'https://d2j684ot9o9qkj.cloudfront.net/photos';
         <link rel="stylesheet" href="style.css">
         <title>Geoff Clayton photography</title>
         <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+        <?php foreach ($photo_filenames as $photo_filename) { ?>
+        <link rel='prefetch' href='<?= $cloudfront_address ?>/1600/<?= $photo_filename ?>.jpg' />
+        <?php } ?>
         <script defer data-domain="photography.geoffclayton.com" src="https://stats.geoffclayton.com/js/plausible.js"></script>
     </head>
     <body>
