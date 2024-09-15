@@ -23,6 +23,7 @@ $cloudfront_address = 'https://d2j684ot9o9qkj.cloudfront.net/photos';
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <title>Geoff Clayton photography</title>
+        <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
         <script defer data-domain="photography.geoffclayton.com" src="https://stats.geoffclayton.com/js/plausible.js"></script>
     </head>
     <body>
