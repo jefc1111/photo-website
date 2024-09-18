@@ -1,5 +1,6 @@
 <div class="main-container">
     <div class="thumbnails-grid-container">
+
         <?php 
         $path = $_SERVER["SCRIPT_FILENAME"];
 
@@ -15,5 +16,6 @@
         ";
         } 
         ?>
+
     </div>
 </div>
