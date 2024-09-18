@@ -36,7 +36,9 @@ $cloudfront_address = 'https://d2j684ot9o9qkj.cloudfront.net/photos';
             <h1>Geoff Clayton Photography</h1>
         </header>
         <?php } ?>
-        <?= require_once("views/$body_content.php") ?>
+        <body>
+            <?= require_once("views/$body_content.php") ?>
+        </body>
         <footer class="footer">
             <p>&copy; <?= date("Y") ?> Geoff Clayton. All rights reserved. The images displayed on this website are protected by copyright law. Unauthorized use, reproduction, or distribution of these images, without prior written consent, is strictly prohibited.</p>
             More info and contact details at <a href="https://geoffclayton.com">geoffclayton.com</a>

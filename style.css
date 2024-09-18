@@ -15,7 +15,11 @@ body {
     background-color: #000;
 }
 
-.container {
+.main-container {
+    flex-grow: 1;
+}
+
+.thumbnails-grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
@@ -35,7 +39,7 @@ body {
     }
 }
 
-.container img {
+.thumbnails-grid-container img {
     object-fit: cover;
     width: 200px;
     height: 200px;
@@ -48,6 +52,7 @@ body {
     font-size: 12px;
     width: 100%;
     position: relative;
+    flex-shrink: 0; /* Ensures the footer doesn't shrink */
 }
 
 .footer p {
@@ -71,12 +76,22 @@ a.home-link:hover {
     text-decoration: underline;
 }
 
+.photo-1600-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+    max-width: 95vw;
+    margin: 0 auto;
+}
+
 .photo-1600 {    
     max-width: 99vw;
-    max-height: 92vh;
+    max-height: calc(100vh - 140px); /* Leaves space for the footer (100px) */
     height: auto;
     display: block;
-    margin: 40px auto;
+    margin: 40px auto 0 auto;
 }
 
 header {
