@@ -28,13 +28,13 @@ body {
 
 /* Responsive Design */
 @media (max-width: 900px) {
-    .container {
+    .thumbnails-grid-container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 600px) {
-    .container {
+    .thumbnails-grid-container {
         grid-template-columns: 1fr;
     }
 }
