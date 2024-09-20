@@ -7,7 +7,7 @@ file_put_contents("php://stdout", "\nRequested: $path"); // Prints to the output
 $photos = [
     [
         'file' => '53942932277',
-        'alt_text' => 'A bench in front of a bush on a hot day with the photographer reflected in a traffic mirror'
+        'alt_text' => 'A bench on a hot day with the photographer reflected in a traffic mirror'
     ],
     [
         'file' => '53944241660',
