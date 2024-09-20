@@ -1,16 +1,43 @@
 <?php
+         
+$path = $_SERVER["SCRIPT_FILENAME"];
 
-$photo_filenames = [    
-    '53942932277',
-    '53944241660',
-    '53944241790',
-    '53944281360',
-    '53944627791',
-    '13820167023',
-    '5565968062'
+file_put_contents("php://stdout", "\nRequested: $path"); // Prints to the output in php -S server
+
+$photos = [
+    [
+        'file' => '53942932277',
+        'alt_text' => 'A bench in front of a bush on a hot day with the photographer reflected in a traffic mirror'
+    ],
+    [
+        'file' => '53944241660',
+        'alt_text' => 'A large rock covered in seaweed'
+    ],
+    [
+        'file' => '53944241790',
+        'alt_text' => 'A rusty circular object by a waterway (sepia)'
+    ],
+    [
+        'file' => '53944281360',
+        'alt_text' => 'A muddy field with a tractor and a farm house in the background'
+    ],
+    [
+        'file' => '53944627791',
+        'alt_text' => 'Frost damaged plants in front of a wall'
+    ],
+    [
+        'file' => '13820167023',
+        'alt_text' => 'A car park full of Dacia Logans from above (B&W)'
+    ],
+    [
+        'file' => '5565968062',
+        'alt_text' => 'A bush with yellow flowers in the foreground with Durdle Door in the background'
+    ]
 ];
 
 $cloudfront_address = 'https://d2j684ot9o9qkj.cloudfront.net/photos';
+
+$get_photo_attr = fn(string $file, string $attr) => array_filter($photos, fn($p) => $p['file'] === $file)[$attr];
 
 ?>
 
@@ -26,8 +53,8 @@ $cloudfront_address = 'https://d2j684ot9o9qkj.cloudfront.net/photos';
         <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
         <?php 
         if ($body_content === 'home') {
-            foreach ($photo_filenames as $photo_filename) {
-                echo "<link rel='prefetch' href='<?= $cloudfront_address ?>/1600/<?= $photo_filename ?>.jpg' />";
+            foreach ($photos as $photo) {
+                echo "<link rel='prefetch' href='<?= $cloudfront_address ?>/1600/<?= {$photo['file']} ?>.jpg' />";
             }            
         }
         ?>
