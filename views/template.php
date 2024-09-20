@@ -34,7 +34,7 @@ $cloudfront_address = 'https://d2j684ot9o9qkj.cloudfront.net/photos';
         <script defer data-domain="photography.geoffclayton.com" src="https://stats.geoffclayton.com/js/plausible.js"></script>
     </head>
     <body>
-        <?php if ($how_title) { ?>
+        <?php if ($show_title) { ?>
         <header>
             <h1>Geoff Clayton Photography</h1>
         </header>

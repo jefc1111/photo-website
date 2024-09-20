@@ -1,3 +1,13 @@
+<h1 style="color: white; ">
+ADD ALT TEXT PER PHOTO AND THUMBNAIL, DESCRIPTIONS, NAMES ETC AS METADATA
+</h1>
+<h1 style="color: white; ">
+DEPLOYMENT PIPELINE
+</h1>
+<h1 style="color: white; ">
+ACCESSIBILITY
+</h1>
+
 <div class="main-container">
     <div class="thumbnails-grid-container">
 
