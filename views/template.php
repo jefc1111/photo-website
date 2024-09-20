@@ -54,7 +54,7 @@ $get_photo_attr = fn(string $file, string $attr) => array_filter($photos, fn($p)
         <?php 
         if ($body_content === 'home') {
             foreach ($photos as $photo) {
-                echo "<link rel='prefetch' href='<?= $cloudfront_address ?>/1600/<?= {$photo['file']} ?>.jpg' />";
+                echo "<link rel='prefetch' href='$cloudfront_address/1600/{$photo['file']}.jpg' />";
             }            
         }
         ?>
