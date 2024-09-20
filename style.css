@@ -46,7 +46,7 @@ body {
 }
 
 .footer {
-    color: #aaa;
+    color: #ccc;
     text-align: center;
     padding: 10px;
     font-size: 12px;
@@ -60,7 +60,7 @@ body {
 }
 
 a:visited {
-    color: #999;
+    color: #aaa;
 }
 
 a.home-link {
