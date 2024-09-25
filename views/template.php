@@ -37,7 +37,7 @@ $photos = [
 
 $cloudfront_address = 'https://d2j684ot9o9qkj.cloudfront.net/photos';
 
-$get_photo_attr = fn(string $file, string $attr) => array_filter($photos, fn($p) => $p['file'] === $file)[$attr];
+$get_photo_attr = fn(string $file, string $attr) => array_values(array_filter($photos, fn($p) => $p['file'] === $file))[0][$attr];
 
 ?>
 
@@ -48,6 +48,7 @@ $get_photo_attr = fn(string $file, string $attr) => array_filter($photos, fn($p)
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A small photography portfolio website for Geoff Clayton">
         <link rel="stylesheet" href="style.css">
         <title>Geoff Clayton Photography</title>
         <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -67,7 +68,7 @@ $get_photo_attr = fn(string $file, string $attr) => array_filter($photos, fn($p)
         </header>
         <?php } ?>
         <body>
-            <?= require_once("views/$body_content.php") ?>
+            <?php require_once("views/$body_content.php"); ?>
         </body>
         <footer class="footer">
             <p>&copy; <?= date("Y") ?> Geoff Clayton. All rights reserved. The images displayed on this website are protected by copyright law. Unauthorized use, reproduction, or distribution of these images, without prior written consent, is strictly prohibited.</p>

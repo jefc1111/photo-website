@@ -8,7 +8,6 @@
                 alt="<?= $photo['alt_text'] ?> (thumbnail)" 
                 src="<?= $cloudfront_address ?>/thumbnail/<?= $photo['file'] ?>.jpg" 
             />
-            <br />
         </a>
 
         <?php } ?>
